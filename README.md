@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Childhood in Labour Archive
 
-## Getting Started
+Archive website documenting child labour through paintings, photography, articles, and other records.
 
-First, run the development server:
+## Run Locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Current Routes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/` homepage
+- `/archive` main archive (search + category filter)
+- `/resources` all source links together on one page
+- `/explore` redirects to `/archive`
+- `/about` placeholder
+- `/contact` placeholder
 
-## Learn More
+## Image Folders
 
-To learn more about Next.js, take a look at the following resources:
+Place images in:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `public/images/home`
+- `public/images/photography`
+- `public/images/painting`
+- `public/images/articles`
+- `public/images/others`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Simple naming format:
 
-## Deploy on Vercel
+- `photo-1.jpg`, `photo-2.jpg`
+- `painting-1.jpg`, `painting-2.jpg`
+- `article-1.jpg`
+- `other-1.jpg`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Content Rules
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Photograph entries in archive show only artist name as text metadata.
+- Resources page keeps all links together (visually grouped by category).
+
+## Deployment (Vercel)
+
+```bash
+vercel login
+vercel
+vercel --prod
+```
