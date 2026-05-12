@@ -11,20 +11,36 @@ export type ArchiveItem = {
 
 export const archiveItems: ArchiveItem[] = [
   {
-    id: "painting-1",
-    category: "painting",
-    title: "Art 1",
-    artist: "Unknown",
-    description: "Digital Art",
-    sourceUrl: "/images/painting/painting-1.jpg",
-  },
-  {
     id: "painting-2",
     category: "painting",
     title: "Art 2",
     artist: "Rafia Akter Konka",
     description: "Painting",
     sourceUrl: "/images/painting/painting-2.jpg",
+  },
+  {
+    id: "painting-5",
+    category: "painting",
+    title: "Art 5",
+    artist: "Arafat Hosen",
+    description: "Sketch",
+    sourceUrl: "/images/painting/painting-5.jpg",
+  },
+  {
+    id: "painting-8",
+    category: "painting",
+    title: "Art 8",
+    artist: "Tazbiha Binte Didar",
+    description: "Painting",
+    sourceUrl: "/images/painting/painting-8.jpg",
+  },
+  {
+    id: "painting-1",
+    category: "painting",
+    title: "Art 1",
+    artist: "Unknown",
+    description: "Digital Art",
+    sourceUrl: "/images/painting/painting-1.jpg",
   },
   {
     id: "painting-3",
@@ -43,14 +59,6 @@ export const archiveItems: ArchiveItem[] = [
     sourceUrl: "/images/painting/painting-4.jpg",
   },
   {
-    id: "painting-5",
-    category: "painting",
-    title: "Art 5",
-    artist: "Arafat Hosen",
-    description: "Painting",
-    sourceUrl: "/images/painting/painting-5.jpg",
-  },
-  {
     id: "painting-6",
     category: "painting",
     title: "Art 6",
@@ -65,14 +73,6 @@ export const archiveItems: ArchiveItem[] = [
     artist: "Eduardo Relero",
     description: "3D Street Art",
     sourceUrl: "/images/painting/painting-7.webp",
-  },
-  {
-    id: "painting-8",
-    category: "painting",
-    title: "Art 8",
-    artist: "Tazbiha Binte Didar",
-    description: "Painting",
-    sourceUrl: "/images/painting/painting-8.jpg",
   },
   {
     id: "photo-1",
