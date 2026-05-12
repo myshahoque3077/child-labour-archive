@@ -6,8 +6,8 @@ export default function AboutPage() {
       <SiteHeader />
       <main className="mx-auto w-full max-w-6xl px-6 py-12">
         <h1 className="text-3xl font-bold md:text-4xl">About</h1>
-        <p className="mt-3 text-zinc-300">
-          This section will be developed in detail in the next phase.
+        <p className="mt-6 text-zinc-400">
+          Under construction. This page will be updated later.
         </p>
       </main>
     </div>
