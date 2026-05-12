@@ -23,7 +23,7 @@ export default function ContactPage() {
         <section className="mt-8 rounded-xl border border-zinc-800 bg-zinc-950 p-5">
           <h2 className="text-xl font-semibold">What you can contribute</h2>
           <ul className="mt-4 space-y-2 text-sm text-zinc-300">
-            <li>Paintings and digital artwork</li>
+            <li>Paintings, graffiti, and digital artwork</li>
             <li>Photography and sculpture images</li>
             <li>Article links and references</li>
           </ul>
