@@ -74,11 +74,11 @@ export default function ArchiveBrowser({ items }: Props) {
         Showing {filteredItems.length} of {items.length} records
       </p>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {filteredItems.length > 0 ? (
           filteredItems.map((item) => <ArchiveCard key={item.id} item={item} />)
         ) : (
-          <div className="md:col-span-2 rounded-xl border border-dashed border-zinc-700 bg-zinc-950 p-8 text-center text-zinc-400">
+          <div className="md:col-span-2 lg:col-span-3 rounded-xl border border-dashed border-zinc-700 bg-zinc-950 p-8 text-center text-zinc-400">
             There is nothing to show in this section yet.
           </div>
         )}

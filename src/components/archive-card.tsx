@@ -54,7 +54,7 @@ export default function ArchiveCard({ item }: Props) {
       ) : null}
       {showPhotographArtistOnly ? (
         <p className="mt-2 text-sm text-zinc-300">
-          Artist: {item.artist ?? "Unknown"}
+          Photographer: {item.artist ?? "Unknown"}
         </p>
       ) : (
         <>

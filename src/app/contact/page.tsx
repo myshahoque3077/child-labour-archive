@@ -1,12 +1,13 @@
 import SiteHeader from "@/components/site-header";
 
+const DEFAULT_SUBMISSION_FORM_URL =
+  "https://forms.gle/KmkPmoVAVEuRwrcb7";
+
 export default function ContactPage() {
-  const formUrl = process.env.NEXT_PUBLIC_GOOGLE_FORM_URL?.trim();
-  const hasForm = Boolean(formUrl);
-  const embeddedUrl =
-    hasForm && formUrl
-      ? `${formUrl}${formUrl.includes("?") ? "&" : "?"}embedded=true`
-      : "";
+  const formUrl =
+    process.env.NEXT_PUBLIC_GOOGLE_FORM_URL?.trim() ||
+    DEFAULT_SUBMISSION_FORM_URL;
+  const embeddedUrl = `${formUrl}${formUrl.includes("?") ? "&" : "?"}embedded=true`;
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -35,35 +36,23 @@ export default function ContactPage() {
         <section className="mt-8 rounded-xl border border-zinc-800 bg-zinc-950 p-5">
           <h2 className="text-xl font-semibold">Submission Form</h2>
 
-          {hasForm && formUrl ? (
-            <div className="mt-4 space-y-4">
-              <iframe
-                src={embeddedUrl}
-                title="Archive submission form"
-                className="h-[900px] w-full rounded-lg border border-zinc-700 bg-black"
-              >
-                Loading...
-              </iframe>
-              <a
-                href={formUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-block rounded-lg border border-emerald-500 px-4 py-2 text-sm text-emerald-400 hover:bg-emerald-500/10"
-              >
-                Open form in new tab
-              </a>
-            </div>
-          ) : (
-            <div className="mt-4 rounded-lg border border-dashed border-zinc-700 bg-black/40 p-4 text-sm text-zinc-300">
-              <p>
-                Google Form link not configured yet.
-              </p>
-              <p className="mt-2 text-zinc-400">
-                Add <code>NEXT_PUBLIC_GOOGLE_FORM_URL</code> in your{" "}
-                <code>.env.local</code> file, then restart the dev server.
-              </p>
-            </div>
-          )}
+          <div className="mt-4 space-y-4">
+            <iframe
+              src={embeddedUrl}
+              title="Child Labour Archive submission form"
+              className="h-[900px] w-full rounded-lg border border-zinc-700 bg-black"
+            >
+              Loading...
+            </iframe>
+            <a
+              href={formUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block rounded-lg border border-emerald-500 px-4 py-2 text-sm text-emerald-400 hover:bg-emerald-500/10"
+            >
+              Open form in new tab
+            </a>
+          </div>
         </section>
       </main>
     </div>
